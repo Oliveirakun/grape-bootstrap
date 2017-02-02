@@ -67,3 +67,11 @@ To access swagger documentation, enter the root application address in the brows
 ```shell
 http://localhost:9292
 ```
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/Oliveirakun/grape-bootstrap.
+
+## License
+
+The software is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
