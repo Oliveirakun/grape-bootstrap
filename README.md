@@ -30,7 +30,7 @@ Bootstrap Grape application for REST APIS with ActiveRecord, RSpec and Swagger i
  $ bundle exec rake db:create db:migrate
  ```
 
- - Run application:
+- Run application:
 
  ```shell
  $ rackup
