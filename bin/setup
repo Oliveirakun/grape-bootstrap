@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+set -vx
+
+sudo apt-get install libmysqlclient-dev
+cp config/database.yml.example config/database.yml
+cp config/redis.yml.example config/redis.yml
+cp config/app_config.yml.example config/app_config.yml
+
+# Do any other automated setup that you need to do here
