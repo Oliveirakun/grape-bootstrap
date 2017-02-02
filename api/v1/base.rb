@@ -16,7 +16,7 @@ module APIv1
     add_swagger_documentation api_version: 'v1',
       info: {
         title: 'Grape Bootstrap V1 API',
-        description: 'Documentação da Versão 2 da API do Tio Patinhas'
+        description: 'Documentation for version 1 API'
       }
   end
 end
