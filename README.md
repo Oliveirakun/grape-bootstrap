@@ -6,6 +6,7 @@ Bootstrap Grape application for REST APIS with ActiveRecord, RSpec and Swagger i
 
 ## Dependencies
 
+- Ruby 2.3.0
 - MySQL
 
 ## Installation

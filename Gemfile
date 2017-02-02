@@ -6,8 +6,6 @@ gem 'grape', '~> 0.17.0'
 gem 'grape-entity', '~> 0.5.1'
 gem 'grape-swagger', '~> 0.25.0'
 gem 'mysql2', '~> 0.4.4'
-gem 'redis', '~> 3.3.1'
-gem 'configureasy', '~> 1.0.0'
 gem 'activerecord', '~> 4.2.7', require: 'active_record'
 gem 'require_all', '~> 1.3.3'
 
@@ -26,7 +24,6 @@ group :test do
   gem 'factory_girl'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
-  gem 'fakeredis', require: 'fakeredis/rspec'
   gem 'simplecov', require: false
 end
 
