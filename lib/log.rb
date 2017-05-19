@@ -8,7 +8,7 @@ class Log
     @logger = logger
     @hostname = Socket.gethostname
     @pid = Process.pid
-    @appname = 'Tio Patinhas'
+    @appname = 'Grape Bootstrap'
     apply_formatter
   end
 
