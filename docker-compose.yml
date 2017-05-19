@@ -1,0 +1,23 @@
+version: '2'
+services:
+  db:
+    image: "mysql:5.7"
+    expose:
+      - 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+    environment:
+      DB_USER: root
+      DB_PASSWORD: root
+      DB_HOST: db
+    links:
+      - db
+    command: bundle exec rackup -p 3000 --host 0.0.0.0
+

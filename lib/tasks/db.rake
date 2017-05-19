@@ -1,6 +1,7 @@
 require 'bundler'
 require 'active_record'
 require 'yaml'
+require 'erb'
 
 # Temporary switch to blank rake app, extract required tasks and import them to
 # current rake task. Skip seed loader here, as we do not need it for tests.
@@ -22,7 +23,7 @@ def import_active_record_tasks(default_rake_app)
   # WARNING! This MUST be a String not a Symbol
   DatabaseTasks.env                    = environment
   DatabaseTasks.db_dir                 = db_dir
-  DatabaseTasks.database_configuration = YAML.load_file(db_config_path)
+  DatabaseTasks.database_configuration = YAML.load(ERB.new(File.read(db_config_path)).result)
   DatabaseTasks.migrations_paths       = [migrations_path]
 
   # Several AR tasks rely (but do not include) on this task internally (like :create)
