@@ -33,8 +33,24 @@ Bootstrap Grape application for REST APIS with ActiveRecord, RSpec and Swagger i
 - Run application:
 
  ```shell
- $ rackup
+ $ rackup -p 3000
  ```
+
+## Docker
+
+To run application on docker:
+
+- Install Docker and Docker-Compose
+- Clone the project
+- Run these commands on project root:
+
+```shell
+$ docker-compose build
+$ docker-compose up
+
+# Open another terminal and run:
+$ docker-compose run web bundle exec rake db:create db:migrate
+```
 
 ## Console
 
@@ -65,7 +81,7 @@ $ bundle exec rake routes
 To access swagger documentation, enter the root application address in the browser:
 
 ```shell
-http://localhost:9292
+http://localhost:3000
 ```
 
 ## Contributing
